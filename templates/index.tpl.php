@@ -15,8 +15,7 @@
 
 <body>
     <header>
-        <?php if (isset($header['loggedin'])) { ?><h2><?= $header['loggedin'] ?></h2><?php } ?>
-        <?php if (isset($_SESSION['login'])) { ?>Bejlentkezett: <strong><?= $_SESSION['firstName'] . " " . $_SESSION['lastName'] . " (" . $_SESSION['login'] . ")" ?></strong><?php } ?>
+    <?php if (isset($_SESSION['loginName'])) { ?>Bejlentkezett: <strong><?= $_SESSION['firstName'] . " " . $_SESSION['lastName'] . " (" . $_SESSION['loginName'] . ")" ?></strong><?php } ?>
     </header>
     <div id="page">
         <div id="sidebar">
@@ -24,14 +23,26 @@
                 <ul>
                     <li id=menuTop>&nbsp</li>
                     <?php foreach ($pages as $url => $page) { ?>
-                        <?php if (!isset($_SESSION['login'])) { ?>
+                        <?php if (($url != 'kilépés') && ($url != 'belépés') && ($url != 'regisztráció') && ($url != 'belép')) { ?>
 
-                            <li id="menuEntry" <?= (($page == $search) ? ' class="active"' : '') ?>>
+                            <li id="menuEntry">
                                 <a href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
                                     <?= $page['text'] ?></a>
                             </li>
-                        <?php } ?>
-                    <?php } ?>
+                        <?php } else if (isset($_SESSION['loginName']) && ($url == 'kilépés')) { ?>
+
+                            <li id="menuEntry">
+                                <a href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
+                                    <?= $page['text'] ?></a>
+                            </li>
+                        <?php } else if (!isset($_SESSION['loginName']) && ($url == 'belépés')) { ?>
+                            <li id="menuEntry">
+                                <a href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
+                                    <?= $page['text'] ?></a>
+                            </li>
+                        <?php
+                    }
+                } ?>
                     <li id=menuBottom>&nbsp</li>
                 </ul>
             </nav>

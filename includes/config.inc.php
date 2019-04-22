@@ -16,8 +16,10 @@ $pages=array(
     'kapcsolat'=>array('file'=>'kapcsolat','text'=>'Kapcsolat'),
     'képgaléria'=>array('file'=>'képgaléria','text'=>'Képgaléria'),
     'videogalériak'=>array('file'=>'videogaléria','text'=>'Video galéria'),
-    'kilépés'=>array('file'=>'belépés','text'=>'Belépés'),
-    'belépés'=>array('file'=>'kilépés','text'=>'Kilépés')
+    'kilépés'=>array('file'=>'kilépés','text'=>'Kilépés'),
+    'belépés'=>array('file'=>'belépés','text'=>'Belépés'),
+    'regisztráció'=>array('file'=>'regisztráció','text'=>'Regisztráció'),
+    'belép'=>array('file'=>'belép','text'=>'Belép')
 );
 $err404=array('file'=>'err404','text'=>'Az oldal nem található');
 ?>

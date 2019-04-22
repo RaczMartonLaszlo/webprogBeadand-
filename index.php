@@ -11,5 +11,4 @@ if (isset($_GET['page'])) {
     }
 
 }
-include('./templates/index.tpl.php'); 
-?>
+include('./templates/index.tpl.php');

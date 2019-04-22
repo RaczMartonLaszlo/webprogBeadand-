@@ -1,4 +1,4 @@
-<form action="?oldal=belep" method="post">
+<form action="?page=belép" method="post">
   <fieldset>
     <legend>Bejlentkezés</legend>
     <br>
@@ -8,7 +8,7 @@
     <br>&nbsp;
   </fieldset>
 </form>
-<form action="?oldal=regisztral" method="post">
+<form action="?page=regisztráció" method="post">
   <fieldset>
     <legend>Regisztráció</legend>
     <br>
