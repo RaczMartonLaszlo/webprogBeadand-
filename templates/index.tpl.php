@@ -42,6 +42,7 @@
     </div>
     <footer>
         <?php if (isset($footer['copyright'])) { ?>&copy;&nbsp;<?= $footer['copyright'] ?> <?php } ?>
+        <a href="http://www.dmta.hu">Eredeti weboldal</a>
     </footer>
 </body>
 

@@ -2,6 +2,7 @@ body{
     background: #34a9db;
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 11px;
+    color: #00788E;
 }
 header{
     background-image: url(../images/style/header.jpg);
@@ -38,7 +39,7 @@ footer{
     display: table-cell;
 }
 ul{
-    padding-inline-start: 0px;
+    padding-left: 10px;
 }
 #menuTop{
     list-style-type: none;

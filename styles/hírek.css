@@ -1,6 +1,14 @@
+#hírek h2{
+    color: #ea5e00;
+    margin: 10px;
+}
+#hírek span{
+    float: right;
+}
 #hírek .article{
     background-image: url(../images/style/article_lead.png);
     background-repeat: no-repeat;
+    margin: 10px;
     width: 540px;
 }
 #hírek .article a{
@@ -9,4 +17,5 @@
 }
 #hírek .article h3{
     padding-left: 10px;
+    display: inline;
 }

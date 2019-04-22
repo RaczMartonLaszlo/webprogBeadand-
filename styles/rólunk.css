@@ -1,0 +1,14 @@
+#rólunk h2{
+    color: #ea5e00;
+    margin: 10px;
+}
+#rólunk .article{
+    width: 540px;
+    background: url(../images/style/article_lead.png) no-repeat;
+    margin: 10px;
+}
+#rólunk ul{
+    list-style: outside square;
+    margin-left: 15px;
+    line-height: 18px;
+}
