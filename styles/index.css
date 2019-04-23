@@ -3,19 +3,30 @@ body{
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 11px;
     color: #00788E;
+    width: 100%;
+}
+#pagestyle{
+    display: block;
+    float: left;
+    width: 100%;
+    background-image: url(../images/style/content_cont_bg.png);
+    background-repeat: repeat-x;
 }
 header{
     background-image: url(../images/style/header.jpg);
     background-repeat: no-repeat;
     display: block;
+    float: left;
     width: 790px;
     height: 127px;
     left: 50%;
     margin-left: -395px;
     position: relative;
 }
+
 #page{
     display: block;
+    float: left;
     width: 774px;
     left: 50%;
     margin-left: -395px;
@@ -26,6 +37,7 @@ header{
 }
 footer{
     display: block;
+    float: left;
     width: 790px;
     height: 38px;
     left: 50%;

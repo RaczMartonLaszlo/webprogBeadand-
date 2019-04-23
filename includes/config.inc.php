@@ -19,7 +19,8 @@ $pages=array(
     'kilépés'=>array('file'=>'kilépés','text'=>'Kilépés'),
     'belépés'=>array('file'=>'belépés','text'=>'Belépés'),
     'regisztráció'=>array('file'=>'regisztráció','text'=>'Regisztráció'),
-    'belép'=>array('file'=>'belép','text'=>'Belép')
+    'belép'=>array('file'=>'belép','text'=>'Belép'),
+    'email'=>array('file'=>'email','text'=>'E-mail')
 );
 $err404=array('file'=>'err404','text'=>'Az oldal nem található');
 ?>

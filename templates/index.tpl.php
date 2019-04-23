@@ -15,40 +15,42 @@
 
 <body>
     <header>
-    <?php if (isset($_SESSION['loginName'])) { ?>Bejlentkezett: <strong><?= $_SESSION['firstName'] . " " . $_SESSION['lastName'] . " (" . $_SESSION['loginName'] . ")" ?></strong><?php } ?>
+        <?php if (isset($_SESSION['loginName'])) { ?>Bejlentkezett: <strong><?= $_SESSION['firstName'] . " " . $_SESSION['lastName'] . " (" . $_SESSION['loginName'] . ")" ?></strong><?php } ?>
     </header>
-    <div id="page">
-        <div id="sidebar">
-            <nav>
-                <ul>
-                    <li id=menuTop>&nbsp</li>
-                    <?php foreach ($pages as $url => $page) { ?>
-                        <?php if (($url != 'kilépés') && ($url != 'belépés') && ($url != 'regisztráció') && ($url != 'belép')) { ?>
+    <div id="pagestyle">
+        <div id="page">
+            <div id="sidebar">
+                <nav>
+                    <ul>
+                        <li id=menuTop>&nbsp</li>
+                        <?php foreach ($pages as $url => $page) { ?>
+                            <?php if (($url != 'kilépés') && ($url != 'belépés') && ($url != 'regisztráció') && ($url != 'belép') && ($url != 'email')) { ?>
 
-                            <li id="menuEntry">
-                                <a href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
-                                    <?= $page['text'] ?></a>
-                            </li>
-                        <?php } else if (isset($_SESSION['loginName']) && ($url == 'kilépés')) { ?>
+                                <li id="menuEntry">
+                                    <a href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
+                                        <?= $page['text'] ?></a>
+                                </li>
+                            <?php } else if (isset($_SESSION['loginName']) && ($url == 'kilépés')) { ?>
 
-                            <li id="menuEntry">
-                                <a href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
-                                    <?= $page['text'] ?></a>
-                            </li>
-                        <?php } else if (!isset($_SESSION['loginName']) && ($url == 'belépés')) { ?>
-                            <li id="menuEntry">
-                                <a href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
-                                    <?= $page['text'] ?></a>
-                            </li>
-                        <?php
-                    }
-                } ?>
-                    <li id=menuBottom>&nbsp</li>
-                </ul>
-            </nav>
-        </div>
-        <div id="content">
-            <?php include("./templates/pages/{$search['file']}.tpl.php"); ?>
+                                <li id="menuEntry">
+                                    <a href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
+                                        <?= $page['text'] ?></a>
+                                </li>
+                            <?php } else if (!isset($_SESSION['loginName']) && ($url == 'belépés')) { ?>
+                                <li id="menuEntry">
+                                    <a href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
+                                        <?= $page['text'] ?></a>
+                                </li>
+                            <?php
+                        }
+                    } ?>
+                        <li id=menuBottom>&nbsp</li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="content">
+                <?php include("./templates/pages/{$search['file']}.tpl.php"); ?>
+            </div>
         </div>
     </div>
     <footer>
