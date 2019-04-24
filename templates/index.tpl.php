@@ -16,6 +16,20 @@
 <body>
     <header>
         <?php if (isset($_SESSION['loginName'])) { ?>Bejlentkezett: <strong><?= $_SESSION['firstName'] . " " . $_SESSION['lastName'] . " (" . $_SESSION['loginName'] . ")" ?></strong><?php } ?>
+        <div id="search">
+            <script>
+                (function() {
+                    var cx = '009986907123990620210:non66d-ckxm';
+                    var gcse = document.createElement('script');
+                    gcse.type = 'text/javascript';
+                    gcse.async = true;
+                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(gcse, s);
+                })();
+            </script>
+            <gcse:search></gcse:search>
+        </div>
     </header>
     <div id="pagestyle">
         <div id="page">

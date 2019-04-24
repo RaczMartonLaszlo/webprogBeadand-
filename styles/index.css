@@ -12,6 +12,11 @@ body{
     background-image: url(../images/style/content_cont_bg.png);
     background-repeat: repeat-x;
 }
+#search{
+    width: 400px;
+    float: right;
+    padding: 10px;
+}
 header{
     background-image: url(../images/style/header.jpg);
     background-repeat: no-repeat;
